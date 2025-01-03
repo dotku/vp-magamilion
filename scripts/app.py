@@ -1,9 +1,11 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import csv
 import requests
 import io
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 CSV_URL = "https://data.ny.gov/api/views/5xaw-6ayf/rows.csv?accessType=DOWNLOAD"
 
